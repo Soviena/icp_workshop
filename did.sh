@@ -9,7 +9,7 @@ function generate_did() {
       --target wasm32-unknown-unknown \
       --release --package "$canister" \
 
-  candid-extractor "target/wasm32-unknown-unknown/release/$canister.wasm" > "$canister_root/$canister.did"
+  ./candid-extractor "target/wasm32-unknown-unknown/release/$canister.wasm" > "$canister_root/$canister.did"
 }
 
 CANISTERS=icp_rust_boilerplate_backend
